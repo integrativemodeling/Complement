@@ -1,7 +1,6 @@
 title: Human Complement
-tags: [quantitative crosslinking, Mass Spectrometry, PMI, C3, C3b, iC3]
-pmid: XXXXXXX
-prereqs: [python, python/matplotlib, python/biopython]
+tags: [quantitative crosslinking, mass spectrometry, PMI, C3, C3b, iC3]
+prereqs: [python/matplotlib, python/biopython]
 test:
-    runtime: XX
+    runtime: 24h
     build: release
