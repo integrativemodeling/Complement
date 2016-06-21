@@ -201,6 +201,9 @@ xld=IMP.pmi.restraints.basic.DistanceRestraint(simo1,
 xld.add_to_model()
 outputobjects.append(xld)
 
+o=IMP.pmi.output.Output()
+#o.write_test("test.21-06-2016.txt", [xl,xld,ev,simo1])
+o.test("test.21-06-2016.txt", [xl,xld,ev,simo1])
 
 mc1=IMP.pmi.macros.ReplicaExchange0(m,
                                     simo1,
@@ -229,4 +232,5 @@ mc1=IMP.pmi.macros.ReplicaExchange0(m,
                                     best_pdb_dir="pdbs/",
                                     replica_stat_file_suffix="stat_replica")
 mc1.execute_macro()
+
 
