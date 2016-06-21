@@ -162,8 +162,8 @@ fo=FO('Quantitation summary',operator.eq,'C3 Unique')| \
 
 filtered_cldb=cldb.filter(fo)
 
-xl = IMP.pmi.restraints.crosslinking_new.CrossLinkingMassSpectrometryRestraint(simo1,
-                            filtered_cldb,
+xl = IMP.pmi.restraints.crosslinking.CrossLinkingMassSpectrometryRestraint(representation=simo1,
+                            CrossLinkDataBase=filtered_cldb,
                             length=21.0,
                             slope=0.01,
                             resolution=1.0,

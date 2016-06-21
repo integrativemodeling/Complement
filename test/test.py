@@ -1,6 +1,5 @@
 import IMP
 import IMP.core
-import IMP.base
 import IMP.algebra
 import IMP.atom
 import IMP.container
@@ -78,6 +77,7 @@ if compactrepresentation:
        # compname  hier_name    color         fastafile              fastaid          pdbname      chain    resrange      read    "BEADS"ize rigid_body super_rigid_body emnum_components emtxtfilename  emmrcfilename chain of super rigid bodies
     domains=   [
     ("beta",  "beta",    0.0,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2A73.pdb" ,   "A",   (1,645,0),  None,        10,      0,         [0],     0,   None,  None,   [0]),
+    ("alpha",  "ANA",    0.10,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2A73.pdb" ,   "B",   (650,726,0),  None,        10,      1,         [1],     0,   None,  None,   [1]),
     ("alpha",  "ANT",    0.20,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2A73.pdb" ,   "B",   (727,745,0),  None,        10,      0,         [0],     0,   None,  None,   [1]),
     ("alpha",  "MG6beta",    0.30,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2A73.pdb" ,   "B",   (746,805,0),  None,        10,  0,         [0],     0,   None,  None,   [1]),
     ("alpha",  "MG7",    0.40,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2A73.pdb" ,   "B",   (806,911,0),  None,        10,      2,         [1],     0,   None,  None,   [1]),
@@ -91,21 +91,22 @@ if compactrepresentation:
 
 else:
      domains=   [
-    ("beta",  "beta",    0.0,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2I07.pdb" ,   "A",       (1,645,0),  None,       1,     0,         [0],     0,   None,  None,   [1]),
-    ("alpha",  "ANT",    0.20,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2I07.pdb" ,   "B",      (727,745,0),  None,     1,     0,         [0],     0,   None,  None,   [1]),
-    ("alpha",  "MG6beta",    0.30,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2I07.pdb" ,   "B",  (746,804,0),  None,     1,     0,         [0],     0,   None,  None,   [1]),
+    ("beta",  "beta",    0.0,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2A73.pdb" ,   "A",       (1,645,0),  None,       1,     0,         [0],     0,   None,  None,   [1]),
+    ("alpha",  "ANA",    0.10,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2A73.pdb" ,   "B",      (650,726,0),  None,     1,     1,         [1],     0,   None,  None,   [1]),
+    ("alpha",  "ANT",    0.20,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2A73.pdb" ,   "B",      (727,745,0),  None,     1,     0,         [0],     0,   None,  None,   [1]),
+    ("alpha",  "MG6beta",    0.30,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2A73.pdb" ,   "B",  (746,804,0),  None,     1,     0,         [0],     0,   None,  None,   [1]),
     ("alpha",  "MG6beta_MG7_Link",    0.30,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", "BEADS" ,   None,         (805,806,0),  None,     1,     None,         [0],     0,   None,  None,   [1]),
-    ("alpha",  "MG7",    0.40,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2I07.pdb" ,   "B",      (807,910,0),  None,     1,     2,         [1],     0,   None,  None,   [1]),
+    ("alpha",  "MG7",    0.40,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2A73.pdb" ,   "B",      (807,910,0),  None,     1,     2,         [1],     0,   None,  None,   [1]),
     ("alpha",  "MG7_CUBf_Link",    0.40,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", "BEADS" ,   None,            (911,912,0),  None,     1,     None,         [1],     0,   None,  None,   [1]),
-    ("alpha",  "CUBf",    0.50,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2I07.pdb" ,   "B",     (913,961,0),  None,     1,     3,         [1],     0,   None,  None,   [1]),
+    ("alpha",  "CUBf",    0.50,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2A73.pdb" ,   "B",     (913,961,0),  None,     1,     3,         [1],     0,   None,  None,   [1]),
     ("alpha",  "CUBf_TED_Link",    0.50,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", "BEADS" ,   None,            (962,963,0),  None,     1,     None,         [1],     0,   None,  None,   [1]),
-    ("alpha",  "TED",    0.60,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2I07.pdb" ,   "B",      (964,1267,0),  None,    1,     4,         [1],     0,   None,  None,   [1]),
+    ("alpha",  "TED",    0.60,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2A73.pdb" ,   "B",      (964,1267,0),  None,    1,     4,         [1],     0,   None,  None,   [1]),
     ("alpha",  "TED_CUBg_Link",    0.60,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", "BEADS" ,   None,            (1268,1269,0),  None,   1,     None,         [1],     0,   None,  None,   [1]),
-    ("alpha",  "CUBg",    0.70,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2I07.pdb" ,   "B",     (1270,1329,0),  None,   1,     3,         [1],     0,   None,  None,   [1]),
+    ("alpha",  "CUBg",    0.70,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2A73.pdb" ,   "B",     (1270,1329,0),  None,   1,     3,         [1],     0,   None,  None,   [1]),
     ("alpha",  "CUBg_MG8_Link",    0.70,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", "BEADS" ,   None,            (1330,1331,0),  None,   1,     None,         [1],     0,   None,  None,   [1]),
-    ("alpha",  "MG8",    0.80,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2I07.pdb" ,   "B",      (1332,1473,0),  None,   1,     5,         [1],     0,   None,  None,   [1]),
+    ("alpha",  "MG8",    0.80,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2A73.pdb" ,   "B",      (1332,1473,0),  None,   1,     5,         [1],     0,   None,  None,   [1]),
     ("alpha",  "MG8_Anchor_Link",    0.80,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", "BEADS" ,   None,          (1474,1475,0),  None,   1,     None,         [1],     0,   None,  None,   [1]),
-    ("alpha",  "Anchor_C345C",    1.0,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2I07.pdb" ,   "B",   (1476,1641,0),  None,   1,     6,         [1],     0,   None,  None,   [1]),
+    ("alpha",  "Anchor_C345C",    1.0,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2A73.pdb" ,   "B",   (1476,1641,0),  None,   1,     6,         [1],     0,   None,  None,   [1]),
     ]   
 
 bm1=IMP.pmi.macros.BuildModel1(simo1)
@@ -118,6 +119,7 @@ bm1.set_coordinates("CUBf_TED_Link",IMP.pmi.tools.get_position_terminal_residue(
 bm1.set_coordinates("TED_CUBg_Link",IMP.pmi.tools.get_position_terminal_residue(bm1.domain_dict["TED"], terminus="C", resolution=1))
 bm1.set_coordinates("CUBg_MG8_Link",IMP.pmi.tools.get_position_terminal_residue(bm1.domain_dict["CUBg"], terminus="C", resolution=1))
 bm1.set_coordinates("MG8_Anchor_Link",IMP.pmi.tools.get_position_terminal_residue(bm1.domain_dict["MG8"], terminus="C", resolution=1))
+
 
 # randomize the initial configuration
 
@@ -154,9 +156,9 @@ cldb=IMP.pmi.io.crosslink.CrossLinkDataBase(cldbkc)
 cldb.create_set_from_file("../data/QCLMS_iC3-Domain-Architecture_Rappsilber_TableS2-1.csv")
 
 fo=FO('Quantitation summary',operator.eq,'C3b-iC3 shared')| \
-   FO('Quantitation summary',operator.eq,'C3b-C3 shared')| \
+   FO('Quantitation summary',operator.eq,'C3-iC3 shared')|  \
    FO('Quantitation summary',operator.eq,'Common')| \
-   FO('Quantitation summary',operator.eq,'C3b Unique')
+   FO('Quantitation summary',operator.eq,'iC3 Unique')
 
 filtered_cldb=cldb.filter(fo)
 
@@ -213,9 +215,9 @@ mc1=IMP.pmi.macros.ReplicaExchange0(m,
                                     simulated_annealing_maximum_temperature_nframes=10,
                                     replica_exchange_minimum_temperature=1.0,
                                     replica_exchange_maximum_temperature=2.5,
-                                    number_of_best_scoring_models=50,
+                                    number_of_best_scoring_models=1,
                                     monte_carlo_steps=10,
-                                    number_of_frames=100000,
+                                    number_of_frames=1,
                                     write_initial_rmf=True,
                                     initial_rmf_name_suffix="initial",
                                     stat_file_name_suffix="stat",
