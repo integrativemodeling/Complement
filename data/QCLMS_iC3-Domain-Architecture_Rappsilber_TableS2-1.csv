@@ -1,0 +1,116 @@
+Residue 1,Domain 1,Peptide Chain 1,Residue 2,Domain 2,Peptide Chain 2,Linkage type,log2(iC3/C3),log2(C3b/iC3),log2(C3b/C3),Quantitation summary,C-_ distance in C3 PDB|2a73,substiltute,C-_ distance in C3b PDB|2i07,PSI
+1049,TED,alpha,1409,MG8,alpha,Between domains,C3 Unique,N/A,C3 Unique,C3 Unique,11.8,,122.6,Confident
+1346,MG8,alpha,1475,Anchor,alpha,Between domains,C3 Unique,N/A,C3 Unique,C3 Unique,12.1,,12.8,Confident
+1479,Anchor,alpha,1573,C345C,alpha,Between domains,C3 Unique,N/A,C3 Unique,C3 Unique,12.4,,23.3,Confident
+267,MG3,beta,650,ANA,alpha,Between domains,C3 Unique,N/A,C3 Unique,C3 Unique,14.1,distance is measured from residue 651,N/A,Confident
+650,ANA,alpha,660,ANA,alpha,Within domain,C3 Unique,N/A,C3 Unique,C3 Unique,15.4,distance is measured from residue 651,N/A,Confident
+654,ANA,alpha,660,ANA,alpha,Within domain,C3 Unique,N/A,C3 Unique,C3 Unique,10.6,,N/A,Confident
+656,ANA,alpha,660,ANA,alpha,Within domain,C3 Unique,N/A,C3 Unique,C3 Unique,6.7,,N/A,Confident
+670,ANA,alpha,1049,TED,alpha,Between domains,C3 Unique,N/A,C3 Unique,C3 Unique,15.6,,N/A,Confident
+727,ANT,alpha,1353,MG8,alpha,Between domains,C3 Unique,N/A,C3 Unique,C3 Unique,14.8,distance is measured from residue 729,37.9,Confident
+905,MG7,alpha,1414,MG8,alpha,Between domains,C3 Unique,N/A,C3 Unique,C3 Unique,18.5,,29.8,Confident
+1353,MG8,alpha,1440,MG8,alpha,Within domain,N/A,C3b Unique,C3b Unique,C3b Unique,11.5,,11,Confident
+727,ANT,alpha,1359,MG8,alpha,Between domains,N/A,C3b Unique,C3b Unique,C3b Unique,20.4,distance is measured from residue 729,26.1,Confident
+727,ANT,alpha,857,MG7,alpha,Between domains,N/A,C3b Unique,C3b Unique,C3b Unique,51.1,distance is measured from residue 729,16.5,Confident
+727,ANT,alpha,895,MG7,alpha,Between domains,N/A,C3b Unique,C3b Unique,C3b Unique,42.5,distance is measured from residue 729,9.2,Confident
+727,ANT,alpha,900,MG7,alpha,Between domains,N/A,C3b Unique,C3b Unique,C3b Unique,44.4,distance is measured from residue 729,14.5,Confident
+75,MG1,beta,1293,CUBg,alpha,Between domains,N/A,C3b Unique,C3b Unique,C3b Unique,62.6,distance is measured from residue 80,18.1,Confident
+882,MG7,alpha,1593,C345C,alpha,Between domains,N/A,C3b Unique,C3b Unique,C3b Unique,28.7,,22.3,Confident
+1019,TED,alpha,1029,TED,alpha,Within domain,iC3 Unique,0.38,C3b Unique,C3b-iC3 shared,15.5,,15.4,Confident
+1346,MG8,alpha,1440,MG8,alpha,Within domain,iC3 Unique,1.56,C3b Unique,C3b-iC3 shared,9.7,,9.6,Confident
+1475,Anchor,alpha,1567,C345C,alpha,Between domains,iC3 Unique,1.6,C3b Unique,C3b-iC3 shared,13.8,,8.2,Confident
+267,MG3,beta,1409,MG8,alpha,Between domains,iC3 Unique,-1.95,C3b Unique,C3b-iC3 shared,35,,17.3,Confident
+43,MG1,beta,1028,TED,alpha,Between domains,iC3 Unique,1.39,C3b Unique,C3b-iC3 shared,50.9,,15,Confident
+44,MG1,beta,1019,TED,alpha,Between domains,iC3 Unique,1.94,C3b Unique,C3b-iC3 shared,54.1,,20,Confident
+44,MG1,beta,1028,TED,alpha,Between domains,iC3 Unique,1.85,C3b Unique,C3b-iC3 shared,47.7,,18.7,Confident
+44,MG1,beta,1181,TED,alpha,Between domains,iC3 Unique,1.99,C3b Unique,C3b-iC3 shared,68.7,,38.3,Confident
+44,MG1,beta,1195,TED,alpha,Between domains,iC3 Unique,0.81,C3b Unique,C3b-iC3 shared,78.7,,40.4,Confident
+727,ANT,alpha,1567,C345C,alpha,Between domains,iC3 Unique,1.8,C3b Unique,C3b-iC3 shared,41.5,distance is measured from residue 729,30.3,Confident
+727,ANT,alpha,839,MG7,alpha,Between domains,iC3 Unique,1.73,C3b Unique,C3b-iC3 shared,37.2,distance is measured from residue 729,12.6,Confident
+839,MG7,alpha,1359,MG8,alpha,Between domains,iC3 Unique,3*,C3b Unique,C3b-iC3 shared,26.3,,23.3,Confident
+857,MG7,alpha,1475,Anchor,alpha,Between domains,iC3 Unique,1.56,C3b Unique,C3b-iC3 shared,35.2,,21.3,Confident
+578,LNK,beta,588,LNK,beta,Within domain,0.32,iC3 Unique,C3 Unique,C3-iC3 shared,12.9,,12.7,Confident
+650,ANA,alpha,1353,MG8,alpha,Between domains,-2.63*[1],iC3 Unique,C3 Unique,C3-iC3 shared,17.5,distance is measured from residue 651,N/A,Confident
+650,ANA,alpha,720,ANA,alpha,Within domain,0.39,iC3 Unique,C3 Unique,C3-iC3 shared,9.6,distance is measured from residue 651,N/A,Confident
+650,ANA,alpha,727,ANT,alpha,Between domains,-1.23,iC3 Unique,C3 Unique,C3-iC3 shared,7.6,distance is measured from residue 651,N/A,Confident
+656,ANA,alpha,720,ANA,alpha,Within domain,0.26,iC3 Unique,C3 Unique,C3-iC3 shared,16.8,distance is measured from residue 719,N/A,Confident
+656,ANA,alpha,727,ANT,alpha,Between domains,-1.44,iC3 Unique,C3 Unique,C3-iC3 shared,12.4,distance is measured from residue 729,N/A,Confident
+660,ANA,alpha,699,ANA,alpha,Within domain,1.47,iC3 Unique,C3 Unique,C3-iC3 shared,15.5,,N/A,Confident
+660,ANA,alpha,700,ANA,alpha,Within domain,1.23,iC3 Unique,C3 Unique,C3-iC3 shared,13.9,,N/A,Confident
+663,ANA,alpha,700,ANA,alpha,Within domain,1.74*,iC3 Unique,C3 Unique,C3-iC3 shared,13.8,,N/A,Confident
+664,ANA,alpha,699,ANA,alpha,Within domain,0.99,iC3 Unique,C3 Unique,C3-iC3 shared,13,,N/A,Confident
+666,ANA,alpha,670,ANA,alpha,Within domain,3.19*,iC3 Unique,C3 Unique,C3-iC3 shared,8.3,,N/A,Confident
+699,ANA,alpha,1428,MG8,alpha,Between domains,0.8,iC3 Unique,C3 Unique,C3-iC3 shared,22,,N/A,Confident
+720,ANA,alpha,727,ANT,alpha,Between domains,0.09,iC3 Unique,C3 Unique,C3-iC3 shared,11.9,distance is measured from residue 719 and 729,N/A,Confident
+82,MG1,beta,600,LNK,beta,Between domains,1,iC3 Unique,C3 Unique,C3-iC3 shared,21.8,,21.6,Confident
+1,MG1,beta,464,MG5,beta,Between domains,0.49,-1.2,-0.56,Common,14,,14.2,Confident
+1083,TED,alpha,1149,TED,alpha,Within domain,-1.25,0.81,0.53,Common,15.2,,14.8,Confident
+1091,TED,alpha,1117,TED,alpha,Within domain,-0.56,-1.01,-0.08,Common,13.9,,14,Confident
+1091,TED,alpha,1149,TED,alpha,Within domain,-0.86,0.27,-0.06,Common,9.2,,9.5,Confident
+1146,TED,alpha,1158,TED,alpha,Within domain,-1.82,0.92,-0.45,Common,18.3,,18.1,Confident
+1181,TED,alpha,1222,TED,alpha,Within domain,-1.02,-5.28*,-3.35*,Common,12.9,,12.6,Confident
+1284,CUB,alpha,1303,CUB,alpha,Within domain,0.56,-1.19,0.19,Common,16.7,,16.7,Confident
+1311,CUB,alpha,1319,CUB,alpha,Within domain,-1.25,-0.78,-1.42*,Common,12.4,,12.4,Confident
+133,MG2,beta,790,MG6beta,alpha,Between domains,-0.2,-0.81,-0.16,Common,10.4,,10.2,Confident
+133,MG2,beta,791,MG6beta,alpha,Between domains,0.08,-1.2,-0.73,Common,9,,9.7,Confident
+1351,MG8,alpha,1359,MG8,alpha,Within domain,0.03,-1.42,-1.73*,Common,12.3,,12.6,Confident
+1504,C345C,alpha,1513,C345C,alpha,Within domain,-0.97,0.28,-0.55,Common,13.4,,14,Confident
+1529,C345C,alpha,1577,C345C,alpha,Within domain,-0.65,0.05,0.43,Common,7.1,,8.1,Confident
+1577,C345C,alpha,1593,C345C,alpha,Within domain,0.08,-0.49,-0.22,Common,25.2,,27,Confident
+16,MG1,beta,133,MG2,beta,Between domains,-0.62,-1.78,-2.65*,Common,10,,9.1,Confident
+183,MG2,beta,593,LNK,beta,Between domains,0.19,0.43,1.09,Common,18.9,,17.9,Confident
+19,MG1,beta,133,MG2,beta,Between domains,-1.35,-2.52*,-3.32*,Common,14.2,,13.1,Confident
+219,MG3,beta,406,MG4,beta,Between domains,-0.61,0.16,0.24,Common,17.8,,17.7,Confident
+219,MG3,beta,585,LNK,beta,Between domains,0.25,-0.79,0.24,Common,16.4,,19.7,Confident
+241,MG3,beta,869,MG7,alpha,Between domains,0.71,1.08,2.32*,Common,5.6,,9.6,Confident
+242,MG3,beta,869,MG7,alpha,Between domains,0.64,-0.24,0.19,Common,8.3,,10.6,Confident
+242,MG3,beta,873,MG7,alpha,Between domains,0.51,1,1.57,Common,17.5,,17.1,Confident
+267,MG3,beta,283,MG3,beta,Within domain,-0.91,0.59,-0.2,Common,14.4,,14.7,Confident
+331,MG4,beta,600,LNK,beta,Between domains,0.33,-0.6,-0.15,Common,24.8,,24.5,Confident
+337,MG4,beta,534,MG5,beta,Between domains,0.24,0.7,1.79,Common,15.5,,15.5,Confident
+337,MG4,beta,600,LNK,beta,Between domains,0.24,0.05,0.81,Common,13.9,,14.5,Confident
+340,MG4,beta,611,LNK,beta,Between domains,-0.65,-0.59,-0.22,Common,8.8,,8.6,Confident
+343,MG4,beta,406,MG4,beta,Within domain,-0.3,-0.36,0.31,Common,30.5,,30.8,Confident
+343,MG4,beta,611,LNK,beta,Between domains,-0.35,-1.01,-0.24,Common,10.4,,10,Confident
+363,MG4,beta,406,MG4,beta,Within domain,0.95,-2.29*,-0.53,Common,11.2,,11.4,Confident
+396,MG4,beta,609,LNK,beta,Between domains,3.32*,-1.51,0.96,Common,17.2,,16.8,Confident
+44,MG1,beta,75,MG1,beta,Within domain,0.57,-0.26,-0.1,Common,18.2,distance is measured from residue 80,18.8,Confident
+544,MG6,beta,562,MG6,beta,Within domain,0.22,0.13,0.67,Common,5.3,,5.3,Confident
+562,MG6,beta,757,MG6,alpha,Within domain,0.02,-0.21,-0.12,Common,13.8,,13.7,Confident
+562,MG6,beta,761,MG6,alpha,Within domain,0.32,-0.03,0.12,Common,14.8,,14.8,Confident
+585,LNK,beta,593,LNK,beta,Within domain,0.83,-0.17,2.02,Common,12.4,,14.2,Confident
+586,LNK,beta,593,LNK,beta,Within domain,4.46*,-0.54,3.51*,Common,9.8,,12.1,Confident
+586,LNK,beta,600,LNK,beta,Within domain,1.53,-0.36,1.76,Common,17,,20.6,Confident
+839,MG7,alpha,895,MG7,alpha,Within domain,1.15,-4*,-3.08*,Common,5.4,,5.8,Confident
+857,MG7,alpha,1501,C345C,alpha,Between domains,-1.07,-0.89,-2.31*,Common,18.2,,17.6,Confident
+857,MG7,alpha,1504,C345C,alpha,Between domains,-0.82,-1.81,-2.43*,Common,23.8,,23.5,Confident
+857,MG7,alpha,1513,C345C,alpha,Between domains,1.25,0.58,2.48*,Common,26.2,,18.6,Confident
+857,MG7,alpha,1567,C345C,alpha,Between domains,-0.86,0.57,0.4,Common,23.9,,19.1,Confident
+908,MG7,alpha,1303,CUBg,alpha,Between domains,0.44,-1.11,-0.16,Common,21,,19.1,Confident
+908,MG7,alpha,1331,MG8,alpha,Between domains,0.09,-0.57,-0.28,Common,23.3,,22.2,Confident
+937,CUB,alpha,1284,CUB,alpha,Within domain,0.28,0.29,0.43,Common,14.5,,14.8,Confident
+241,MG3,beta,670,ANA,alpha,Between domains,iC3 Unique,iC3 Unique,N/A,iC3 Unique,35.3,,N/A,Confident
+44,MG1,beta,1049,TED,alpha,Between domains,iC3 Unique,iC3 Unique,N/A,iC3 Unique,57.6,,41,Confident
+650,ANA,alpha,839,MG7,alpha,Between domains,iC3 Unique,iC3 Unique,N/A,iC3 Unique,44,distance is measured from residue 651,N/A,Confident
+666,ANA,alpha,1409,MG8,alpha,Between domains,iC3 Unique,iC3 Unique,N/A,iC3 Unique,26.2,,N/A,Confident
+684,ANA,alpha,839,MG7,alpha,Between domains,iC3 Unique,iC3 Unique,N/A,iC3 Unique,54.3,,N/A,Confident
+699,ANA,alpha,1359,MG8,alpha,Between domains,iC3 Unique,iC3 Unique,N/A,iC3 Unique,38.1,,N/A,Confident
+699,ANA,alpha,1409,MG8,alpha,Between domains,iC3 Unique,iC3 Unique,N/A,iC3 Unique,22.1,,N/A,Confident
+700,ANA,alpha,1409,MG8,alpha,Between domains,iC3 Unique,iC3 Unique,N/A,iC3 Unique,25.6,,N/A,Confident
+720,ANA,alpha,839,MG7,alpha,Between domains,iC3 Unique,iC3 Unique,N/A,iC3 Unique,46,distance is measured from residue 719,N/A,Confident
+1203,TED,alpha,1338,MG8,alpha,Between domains,N/A,N/A,C3 Unique,C3 Unique,11.3,,88.5,Questionable
+1331,MG8,alpha,1479,Anchor,alpha,Between domains,N/A,N/A,C3b Unique,C3b Unique,18.9,,21.6,Questionable
+1338,MG8,alpha,1461,MG8,alpha,Within domain,N/A,N/A,C3b Unique,C3b Unique,13.6,,12.7,Questionable
+1346,MG8,alpha,1359,MG8,alpha,Within domain,N/A,N/A,2.56*,C3b-C3 shared,15.2,,14.2,Questionable
+1397,MG8,alpha,1409,MG8,alpha,Within domain,N/A,N/A,C3b Unique,C3b Unique,7.9,,9.6,Questionable
+203,MG2,beta,1049,TED,alpha,Between domains,N/A,N/A,C3 Unique,C3 Unique,15.4,,92.6,Questionable
+219,MG3,beta,405,MG4,beta,Between domains,N/A,N/A,0.4,C3b-C3 shared,20.2,,20.2,Questionable
+227,MG3,beta,267,MG3,beta,Within domain,-0.88,0.36,N/A,Common,16.9,,16.7,Questionable
+265,MG3,beta,283,MG3,beta,Within domain,N/A,-0.29,-0.57,Common,9.9,,10,Questionable
+267,MG3,beta,656,ANA,alpha,Between domains,N/A,N/A,C3 Unique,C3 Unique,11.9,,N/A,Questionable
+396,MG4,beta,611,LNK,beta,Between domains,0.62,-2.12,N/A,Common,13.9,,13,Questionable
+656,ANA,alpha,663,ANA,alpha,Within domain,N/A,N/A,C3 Unique,C3 Unique,11.9,,N/A,Questionable
+720,ANA,alpha,1353,MG8,alpha,Between domains,N/A,N/A,C3 Unique,C3 Unique,18.6,distance is measured from residue 719,N/A,Questionable
+727,ANT,alpha,830,MG7,alpha,Between domains,N/A,N/A,C3b Unique,C3b Unique,29.8,distance is measured from residue 729,22.3,Questionable
+908,MG7,alpha,1414,MG8,alpha,Between domains,N/A,N/A,C3 Unique,C3 Unique,13.4,,35.2,Questionable
+908,MG7,alpha,979,TED,alpha,Between domains,N/A,N/A,C3 Unique,C3 Unique,22.9,,74.9,Questionable

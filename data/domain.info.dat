@@ -1,0 +1,28 @@
+
+Suggested rigid body
+Beta-chain
+ANA
+MG7
+CUB
+TED
+MG8
+C345C
+
+Domain	start	end	chain	Domain				
+MG1	    1	    105	    A	MG1				
+MG2	    106	    205	    B	MG2				
+MG3	    206	    330	    C	MG3				
+MG4	    331	    440	    D	MG4				
+MG5	    441	    534	    E	MG5				
+MG6alpha	535	577	    F	MG6alpha				
+LNK	    578	    645	    G	LNK				
+ANA	    650	    726	    H	ANA	Cleaved in C3b, however retained in iC3			
+ANT	    727	    745	    I	ANT				
+MG6beta	746	    805	    J	MG6beta				
+MG7	    806	    911	    K	MG7				
+CUBf	912	    962	    L	CUBf				
+TED	    963	    1268	M	TED				
+CUBg	1269	1330	N	CUBg				
+MG8	    1331	1474	O	MG8				
+Anchor	1475	1495	P	Anchor				
+C345C	1496	1641	Q	C345C	

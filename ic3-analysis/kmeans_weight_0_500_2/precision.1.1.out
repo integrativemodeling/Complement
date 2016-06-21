@@ -1,0 +1,50 @@
+All kmeans_weight_0_500_2/cluster.1/ average centroid distance 14.6145478728
+All kmeans_weight_0_500_2/cluster.1/ centroid index 45
+All kmeans_weight_0_500_2/cluster.1/ centroid rmf name ('kmeans_weight_0_500_2/cluster.1/7.rmf3', 0)
+All kmeans_weight_0_500_2/cluster.1/ median centroid distance  14.7843513935
+All kmeans_weight_0_500_2/cluster.1/ kmeans_weight_0_500_2/cluster.1/ average pairwise distance 18.6513555285
+ANA kmeans_weight_0_500_2/cluster.1/ average centroid distance 15.3951740403
+ANA kmeans_weight_0_500_2/cluster.1/ centroid index 51
+ANA kmeans_weight_0_500_2/cluster.1/ centroid rmf name ('kmeans_weight_0_500_2/cluster.1/54.rmf3', 0)
+ANA kmeans_weight_0_500_2/cluster.1/ median centroid distance  13.6063384321
+ANA kmeans_weight_0_500_2/cluster.1/ kmeans_weight_0_500_2/cluster.1/ average pairwise distance 20.6843516451
+alpha kmeans_weight_0_500_2/cluster.1/ average centroid distance 18.7395398729
+alpha kmeans_weight_0_500_2/cluster.1/ centroid index 45
+alpha kmeans_weight_0_500_2/cluster.1/ centroid rmf name ('kmeans_weight_0_500_2/cluster.1/7.rmf3', 0)
+alpha kmeans_weight_0_500_2/cluster.1/ median centroid distance  18.9673918882
+alpha kmeans_weight_0_500_2/cluster.1/ kmeans_weight_0_500_2/cluster.1/ average pairwise distance 23.9282412139
+TED kmeans_weight_0_500_2/cluster.1/ average centroid distance 14.0145013215
+TED kmeans_weight_0_500_2/cluster.1/ centroid index 23
+TED kmeans_weight_0_500_2/cluster.1/ centroid rmf name ('kmeans_weight_0_500_2/cluster.1/31.rmf3', 0)
+TED kmeans_weight_0_500_2/cluster.1/ median centroid distance  12.4832304913
+TED kmeans_weight_0_500_2/cluster.1/ kmeans_weight_0_500_2/cluster.1/ average pairwise distance 18.9089625731
+beta kmeans_weight_0_500_2/cluster.1/ average centroid distance 1.23529170373
+beta kmeans_weight_0_500_2/cluster.1/ centroid index 54
+beta kmeans_weight_0_500_2/cluster.1/ centroid rmf name ('kmeans_weight_0_500_2/cluster.1/9.rmf3', 0)
+beta kmeans_weight_0_500_2/cluster.1/ median centroid distance  1.23294728916
+beta kmeans_weight_0_500_2/cluster.1/ kmeans_weight_0_500_2/cluster.1/ average pairwise distance 1.42432760032
+MG7 kmeans_weight_0_500_2/cluster.1/ average centroid distance 11.929600479
+MG7 kmeans_weight_0_500_2/cluster.1/ centroid index 56
+MG7 kmeans_weight_0_500_2/cluster.1/ centroid rmf name ('kmeans_weight_0_500_2/cluster.1/61.rmf3', 0)
+MG7 kmeans_weight_0_500_2/cluster.1/ median centroid distance  10.7486942919
+MG7 kmeans_weight_0_500_2/cluster.1/ kmeans_weight_0_500_2/cluster.1/ average pairwise distance 16.127216095
+CUBf_CUBg kmeans_weight_0_500_2/cluster.1/ average centroid distance 15.7088176316
+CUBf_CUBg kmeans_weight_0_500_2/cluster.1/ centroid index 19
+CUBf_CUBg kmeans_weight_0_500_2/cluster.1/ centroid rmf name ('kmeans_weight_0_500_2/cluster.1/29.rmf3', 0)
+CUBf_CUBg kmeans_weight_0_500_2/cluster.1/ median centroid distance  14.9958504359
+CUBf_CUBg kmeans_weight_0_500_2/cluster.1/ kmeans_weight_0_500_2/cluster.1/ average pairwise distance 20.7220373498
+beta_ANT_MG6beta kmeans_weight_0_500_2/cluster.1/ average centroid distance 1.29771669659
+beta_ANT_MG6beta kmeans_weight_0_500_2/cluster.1/ centroid index 54
+beta_ANT_MG6beta kmeans_weight_0_500_2/cluster.1/ centroid rmf name ('kmeans_weight_0_500_2/cluster.1/9.rmf3', 0)
+beta_ANT_MG6beta kmeans_weight_0_500_2/cluster.1/ median centroid distance  1.28236966408
+beta_ANT_MG6beta kmeans_weight_0_500_2/cluster.1/ kmeans_weight_0_500_2/cluster.1/ average pairwise distance 1.4992724711
+MG8 kmeans_weight_0_500_2/cluster.1/ average centroid distance 17.2687140862
+MG8 kmeans_weight_0_500_2/cluster.1/ centroid index 8
+MG8 kmeans_weight_0_500_2/cluster.1/ centroid rmf name ('kmeans_weight_0_500_2/cluster.1/6.rmf3', 0)
+MG8 kmeans_weight_0_500_2/cluster.1/ median centroid distance  15.9661465845
+MG8 kmeans_weight_0_500_2/cluster.1/ kmeans_weight_0_500_2/cluster.1/ average pairwise distance 23.608078532
+Anchor_C345C kmeans_weight_0_500_2/cluster.1/ average centroid distance 27.424379046
+Anchor_C345C kmeans_weight_0_500_2/cluster.1/ centroid index 6
+Anchor_C345C kmeans_weight_0_500_2/cluster.1/ centroid rmf name ('kmeans_weight_0_500_2/cluster.1/39.rmf3', 0)
+Anchor_C345C kmeans_weight_0_500_2/cluster.1/ median centroid distance  27.8796007697
+Anchor_C345C kmeans_weight_0_500_2/cluster.1/ kmeans_weight_0_500_2/cluster.1/ average pairwise distance 36.7174977111
