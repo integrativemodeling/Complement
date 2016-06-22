@@ -27,9 +27,7 @@ on a single core and
 mpirun -np 16 $IMP-BUILD-DIRECTORY/setup_environment.py python modeling.py
 ```
 
-The run produces files using the `IMP.pmi` higher interface. Refer to `IMP.tutorial` and`Nup84` examples for a better descriptions of the files.
-
-on multiple cores (eg 16 in this case). 
+on multiple cores (eg 16 in this case). The run produces files using the `IMP.pmi` higher interface. Refer to `IMP.tutorial` and`Nup84` examples for a better descriptions of the files.
 
 `analysis` directories contain the scripts and the results of the analysis on the actual production runs (which are not released here).
 
