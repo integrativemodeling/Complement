@@ -32,11 +32,18 @@ on multiple cores (eg 16 in this case). The run produces files using the `IMP.pm
 `analysis` directories contain the scripts and the results of the analysis on the actual production runs (which are not released here).
 
 `clustering.py` first script that needs to be run. It produces the directories with the corresponding structural clusters data. The output directory is `kmeans_weight_0_500_1`
+
 `color_model.py` assign coded colors to a structure to finalise the image. The output file is `colored.rmf3`
+
 `make_native_aligned.py` align the cluster structures against a given X-ray structure
+
 `plot_cross_links.py` display the box plot for the crosslinks. The output file is `distances.pdf`
+
 `rmsd.py` compute the root mean square distance of the cluster structures from the cluster center. The output file is `rmsd.out`.
+
 `rmsf_precision.py` compute the root mean squared fluctuation of and the domain-wise precision of a cluster
+
 `show_localization.py` chimera session script to display the localization densities with the right threshold
+
 `xl_matrix.py` produces the contact map of the crosslinks, the output file is `XL_table.pdf`
 
