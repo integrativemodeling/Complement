@@ -71,4 +71,4 @@ _Last known good IMP version_: [![build info](https://integrativemodeling.org/sy
 
 _Publications_:
  - Chen ZA, Pellarin R, Fischer L, Sali A, Nilges M, Barlow PN, Rappsilber J.,
-   [Structure of Complement C3(H2O) Revealed By Quantitative Cross-Linking/Mass Spectrometry And Modeling"](https://www.ncbi.nlm.nih.gov/pubmed/27250206), Mol Cell Proteomics, 2016, 10.1074/mcp.M115.056473.
+   [Structure of Complement C3(H2O) Revealed By Quantitative Cross-Linking/Mass Spectrometry And Modeling](https://www.ncbi.nlm.nih.gov/pubmed/27250206), Mol Cell Proteomics, 2016, 10.1074/mcp.M115.056473.
