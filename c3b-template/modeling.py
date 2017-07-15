@@ -112,12 +112,12 @@ bm1=IMP.pmi.macros.BuildModel1(simo1)
 bm1.build_model(domains,sequence_connectivity_scale=1.0,sequence_connectivity_resolution=1)
 bm1.scale_bead_radii(40,0.8)
 #bm1.save_rmf("simo1.rmf3")
-bm1.set_coordinates("MG6beta_MG7_Link",IMP.pmi.tools.get_position_terminal_residue(bm1.domain_dict["MG6beta"], terminus="C", resolution=1))
-bm1.set_coordinates("MG7_CUBf_Link",IMP.pmi.tools.get_position_terminal_residue(bm1.domain_dict["MG7"], terminus="C", resolution=1))
-bm1.set_coordinates("CUBf_TED_Link",IMP.pmi.tools.get_position_terminal_residue(bm1.domain_dict["CUBf"], terminus="C", resolution=1))
-bm1.set_coordinates("TED_CUBg_Link",IMP.pmi.tools.get_position_terminal_residue(bm1.domain_dict["TED"], terminus="C", resolution=1))
-bm1.set_coordinates("CUBg_MG8_Link",IMP.pmi.tools.get_position_terminal_residue(bm1.domain_dict["CUBg"], terminus="C", resolution=1))
-bm1.set_coordinates("MG8_Anchor_Link",IMP.pmi.tools.get_position_terminal_residue(bm1.domain_dict["MG8"], terminus="C", resolution=1))
+bm1.set_coordinates("MG6beta_MG7_Link",IMP.pmi.tools.get_terminal_residue_position(simo1, bm1.domain_dict["MG6beta"], terminus="C", resolution=1))
+bm1.set_coordinates("MG7_CUBf_Link",IMP.pmi.tools.get_terminal_residue_position(simo1, bm1.domain_dict["MG7"], terminus="C", resolution=1))
+bm1.set_coordinates("CUBf_TED_Link",IMP.pmi.tools.get_terminal_residue_position(simo1, bm1.domain_dict["CUBf"], terminus="C", resolution=1))
+bm1.set_coordinates("TED_CUBg_Link",IMP.pmi.tools.get_terminal_residue_position(simo1, bm1.domain_dict["TED"], terminus="C", resolution=1))
+bm1.set_coordinates("CUBg_MG8_Link",IMP.pmi.tools.get_terminal_residue_position(simo1, bm1.domain_dict["CUBg"], terminus="C", resolution=1))
+bm1.set_coordinates("MG8_Anchor_Link",IMP.pmi.tools.get_terminal_residue_position(simo1, bm1.domain_dict["MG8"], terminus="C", resolution=1))
 
 # randomize the initial configuration
 
