@@ -89,6 +89,16 @@ if '--mmcif' in sys.argv:
     # Add publication
     po.system.citations.append(ihm.Citation.from_pubmed_id(27250206))
 
+    # Point to repositories where files are deposited
+    zenodo_id = '1273746'
+    doi = '10.5281/zenodo.' + zenodo_id
+    url_top = 'https://zenodo.org/record/%s/files' % zenodo_id
+    simo1.add_metadata(ihm.location.Repository(
+                       doi=doi, root="..",
+                       url="%s/Complement-v1.0.zip" % url_top,
+                       top_directory="integrativemodeling-Complement-a6a1494"))
+
+
 simo1.dry_run = '--dry-run' in sys.argv
 
 if compactrepresentation:

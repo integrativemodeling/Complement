@@ -3,6 +3,7 @@ import IMP.pmi
 import IMP.pmi.macros
 import sys
 import glob
+import ihm.location
 
 is_mpi=True
 
@@ -91,3 +92,14 @@ mc.clustering("SimplifiedModel_Total_Score_None",  # don't change, field where t
               voxel_size=2.0,                                # voxel size of the mrc files
               density_custom_ranges=reduced_density_dict_0)    # setup the list of densities to be calculated
 
+if '--mmcif' in sys.argv:
+    # Point to deposited ensembles in DCD format
+    dcds = []
+    for i in range(nclusters):
+        r = ihm.location.Repository(doi=doi,
+                                    url="%s/ic3-cluster%d.dcd" % (url_top, i))
+        dcds.append(ihm.location.OutputFileLocation(path='.', repo=r,
+                            details="All iC3 models in cluster %d" % (i+1)))
+    for po in simo1.protocol_output:
+        for i, dcd in enumerate(dcds):
+            po.set_ensemble_file(i, dcd)
