@@ -1,6 +1,5 @@
 import IMP
 import IMP.core
-import IMP.base
 import IMP.algebra
 import IMP.atom
 import IMP.container
@@ -17,6 +16,7 @@ import IMP.pmi.macros
 import IMP.pmi.io
 
 import os
+import sys
 import operator
 
 
@@ -68,6 +68,14 @@ sampleobjects = []
 
 m = IMP.Model()
 simo1 = IMP.pmi.representation.Representation(m,upperharmonic=True,disorderedlength=False)
+simo1.state.short_name = 'iC3'
+simo1.state.long_name = 'Hydrolyzed human complement, iC3 or C3N'
+
+if '--mmcif' in sys.argv:
+    simo1.add_protocol_output(po)
+
+simo1.dry_run = '--dry-run' in sys.argv
+
 fastadirectory="../data/"
 pdbdirectory="../data/"
 xlmsdirectory="../data/"
@@ -228,6 +236,7 @@ mc1=IMP.pmi.macros.ReplicaExchange0(m,
                                     global_output_directory="output",
                                     rmf_dir="rmfs/",
                                     best_pdb_dir="pdbs/",
-                                    replica_stat_file_suffix="stat_replica")
+                                    replica_stat_file_suffix="stat_replica",
+                                    test_mode=simo1.dry_run)
 mc1.execute_macro()
 

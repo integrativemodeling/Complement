@@ -64,6 +64,11 @@ mc=IMP.pmi.macros.AnalysisReplicaExchange0(model,
                                         merge_directories=["../c3b.1","../c3b.2"],
                                         global_output_directory="./output")  # don't change
 
+if '--mmcif' in sys.argv:
+    mc.test_mode = simo1.dry_run
+    for po in simo1.protocol_output:
+        mc.add_protocol_output(po)
+
                                       # number of clusters needed by kmeans
 mc.clustering("SimplifiedModel_Total_Score_None",  # don't change, field where to find the score
               "rmf_file",                          # don't change, field where to find the path for the rmf_file

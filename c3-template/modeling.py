@@ -258,6 +258,22 @@ if '--mmcif' in sys.argv:
     with open('clustering.py') as fh:
         exec(fh.read())
 
+    # Add info on the C3b and iC3 state modeling and clustering
+    for state in ('c3b', 'ic3'):
+        os.chdir('../%s-template' % state)
+        loc = ihm.location.WorkflowFileLocation('modeling.py',
+                      details='Main script for %s state modeling' % state)
+        simo1.add_metadata(loc)
+        with open('modeling.py') as fh:
+            exec(fh.read())
+
+        os.chdir('../%s-analysis' % state)
+        loc = ihm.location.WorkflowFileLocation('clustering.py',
+                 details='Clustering and analysis script for %s state' % state)
+        simo1.add_metadata(loc)
+        with open('clustering.py') as fh:
+            exec(fh.read())
+
     # End up in initial working directory
     os.chdir('../c3-template')
     po.flush()
