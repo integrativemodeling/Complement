@@ -4,6 +4,8 @@ import IMP.algebra
 import IMP.atom
 import IMP.container
 
+import IMP.pmi.mmcif
+import ihm.location
 import IMP.pmi.restraints.crosslinking_new
 import IMP.pmi.restraints.stereochemistry
 import IMP.pmi.restraints.em
@@ -16,6 +18,7 @@ import IMP.pmi.macros
 import IMP.pmi.io
 
 import os
+import sys
 import operator
 
 
@@ -67,11 +70,26 @@ sampleobjects = []
 
 m = IMP.Model()
 simo1 = IMP.pmi.representation.Representation(m,upperharmonic=True,disorderedlength=False)
+simo1.state.short_name = 'C3'
+simo1.state.long_name = 'Human complement component C3'
+
 fastadirectory="../data/"
 pdbdirectory="../data/"
 xlmsdirectory="../data/"
 
 compactrepresentation=False
+
+if '--mmcif' in sys.argv:
+    # Record the modeling protocol to an mmCIF file
+    po = IMP.pmi.mmcif.ProtocolOutput(open('complement.cif', 'w'))
+    simo1.add_protocol_output(po)
+    po.system.title = ('Structure of complement C3(H2O) revealed by '
+                       'quantitative cross-linking/mass spectrometry '
+                       'and modeling')
+    # Add publication
+    po.system.citations.append(ihm.Citation.from_pubmed_id(27250206))
+
+simo1.dry_run = '--dry-run' in sys.argv
 
 if compactrepresentation:
        # compname  hier_name    color         fastafile              fastaid          pdbname      chain    resrange      read    "BEADS"ize rigid_body super_rigid_body emnum_components emtxtfilename  emmrcfilename chain of super rigid bodies
@@ -227,6 +245,19 @@ mc1=IMP.pmi.macros.ReplicaExchange0(m,
                                     global_output_directory="output",
                                     rmf_dir="rmfs/",
                                     best_pdb_dir="pdbs/",
-                                    replica_stat_file_suffix="stat_replica")
+                                    replica_stat_file_suffix="stat_replica",
+                                    test_mode=simo1.dry_run)
 mc1.execute_macro()
 
+if '--mmcif' in sys.argv:
+    # Add clustering info to the mmCIF file
+    os.chdir('../c3-analysis')
+    loc = ihm.location.WorkflowFileLocation('clustering.py',
+                      details='Clustering and analysis script for C3 state')
+    simo1.add_metadata(loc)
+    with open('clustering.py') as fh:
+        exec(fh.read())
+
+    # End up in initial working directory
+    os.chdir('../c3-template')
+    po.flush()
