@@ -196,6 +196,12 @@ xl = IMP.pmi.restraints.crosslinking.CrossLinkingMassSpectrometryRestraint(repre
                             slope=0.01,
                             resolution=1.0,
                             label="XL")
+# Point to the raw mass spec data and peaklists used to derive the crosslinks.
+l = ihm.location.PRIDELocation('PXD003486',
+                         details='All raw mass spectrometry files and '
+                                 'peaklists used in the study')
+xl.dataset.add_primary(ihm.dataset.MassSpecDataset(location=l))
+
 xl.add_to_model()
 sigma=xl.sigma_dictionary["SIGMA"][0]
 psic=xl.psi_dictionary["Confident"][0]

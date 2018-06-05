@@ -18,7 +18,7 @@ class Tests(unittest.TestCase):
         # Check size of output file
         with open("complement.cif") as fh:
             wcl = len(fh.readlines())
-        self.assertEqual(wcl, 23446)
+        self.assertEqual(wcl, 23456)
 
 
 if __name__ == '__main__':
