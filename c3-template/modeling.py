@@ -290,6 +290,15 @@ if '--mmcif' in sys.argv:
         with open('clustering.py') as fh:
             exec(fh.read())
 
+    # Correct # of models (we ran two independent runs)
+    for state_group in po.system.state_groups:
+        for state in state_group:
+            for model_group in state:
+                for model in model_group:
+                    p = model.protocol
+                    p.steps[-1].num_models_end = 200000
+                    p.analyses[0].steps[0].num_models_begin = 200000
+
     # End up in initial working directory
     os.chdir('../c3-template')
     po.flush()
