@@ -299,6 +299,11 @@ if '--mmcif' in sys.argv:
                     p.steps[-1].num_models_end = 200000
                     p.analyses[0].steps[0].num_models_begin = 200000
 
+    # Correct crosslinker type (defaults to restraint label, which is "XL")
+    for r in po.system.restraints:
+        if hasattr(r, 'linker_type'):
+            r.linker_type = 'BS3'
+
     # End up in initial working directory
     os.chdir('../c3-template')
     po.flush()
