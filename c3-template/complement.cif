@@ -3514,7 +3514,7 @@ _ihm_external_files.content_type
 _ihm_external_files.file_size_bytes
 _ihm_external_files.details
 1 1 integrativemodeling-Complement-a6a1494/c3-template/modeling.py
-'Modeling workflow or script' 15980 'The main integrative modeling script'
+'Modeling workflow or script' 16794 'The main integrative modeling script'
 2 2 . 'Modeling or post-processing output' . 'All C3 models in cluster 1'
 3 3 . 'Modeling or post-processing output' . 'All C3b models in cluster 1'
 4 4 . 'Modeling or post-processing output' . 'All iC3 models in cluster 1'
@@ -23453,4 +23453,22 @@ _ihm_multi_state_modeling.details
 2 2 1 . . 'Activated form C3b of human complement' 2 'Fraction of bulk' .
 3 3 1 . . 'Hydrolyzed human complement, iC3 or C3N' 3 'Fraction of bulk' .
 4 3 1 . . 'Hydrolyzed human complement, iC3 or C3N' 4 'Fraction of bulk' .
+#
+#
+loop_
+_ihm_ordered_ensemble.process_id
+_ihm_ordered_ensemble.process_description
+_ihm_ordered_ensemble.ordered_by
+_ihm_ordered_ensemble.step_id
+_ihm_ordered_ensemble.step_description
+_ihm_ordered_ensemble.edge_id
+_ihm_ordered_ensemble.edge_description
+_ihm_ordered_ensemble.model_group_id_begin
+_ihm_ordered_ensemble.model_group_id_end
+1 . 'steps in a reaction pathway' 1 'proteolytic cleavage of C3 yields C3b' 1 .
+1 2
+1 . 'steps in a reaction pathway' 2 'thioester hydrolysis of C3 yields iC3' 2 .
+1 3
+1 . 'steps in a reaction pathway' 2 'thioester hydrolysis of C3 yields iC3' 3 .
+1 4
 #

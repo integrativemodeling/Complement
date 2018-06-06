@@ -6,6 +6,7 @@ import IMP.container
 
 import IMP.pmi.mmcif
 import ihm.location
+import ihm.model
 import IMP.pmi.restraints.crosslinking_new
 import IMP.pmi.restraints.stereochemistry
 import IMP.pmi.restraints.em
@@ -303,6 +304,25 @@ if '--mmcif' in sys.argv:
     for r in po.system.restraints:
         if hasattr(r, 'linker_type'):
             r.linker_type = 'BS3'
+
+    # Add reaction cycle between states (Fig 1B)
+    c3, c3b, ic3 = po.system.state_groups[0]
+    proc = ihm.model.OrderedProcess('steps in a reaction pathway')
+    po.system.ordered_processes.append(proc)
+    s = ihm.model.ProcessStep(
+                    description='proteolytic cleavage of C3 yields C3b')
+    for begin_model_group in c3:
+        for end_model_group in c3b:
+            s.append(ihm.model.ProcessEdge(
+                                begin_model_group, end_model_group))
+    proc.steps.append(s)
+
+    s = ihm.model.ProcessStep(
+                    description='thioester hydrolysis of C3 yields iC3')
+    for begin_model_group in c3:
+        for end_model_group in ic3:
+            s.append(ihm.model.ProcessEdge(begin_model_group, end_model_group))
+    proc.steps.append(s)
 
     # End up in initial working directory
     os.chdir('../c3-template')
