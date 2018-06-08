@@ -3494,16 +3494,16 @@ _ihm_external_reference_info.reference_type
 _ihm_external_reference_info.reference
 _ihm_external_reference_info.refers_to
 _ihm_external_reference_info.associated_url
-1 Zenodo DOI 10.5281/zenodo.1273746 Archive
-https://zenodo.org/record/1273746/files/Complement-v1.0.zip
-2 Zenodo DOI 10.5281/zenodo.1273746 File
-https://zenodo.org/record/1273746/files/c3-cluster0.dcd
-3 Zenodo DOI 10.5281/zenodo.1273746 File
-https://zenodo.org/record/1273746/files/c3b-cluster0.dcd
-4 Zenodo DOI 10.5281/zenodo.1273746 File
-https://zenodo.org/record/1273746/files/ic3-cluster0.dcd
-5 Zenodo DOI 10.5281/zenodo.1273746 File
-https://zenodo.org/record/1273746/files/ic3-cluster1.dcd
+1 Zenodo DOI 10.5281/zenodo.1285940 Archive
+https://zenodo.org/record/1285940/files/Complement-v1.0.zip
+2 Zenodo DOI 10.5281/zenodo.1285940 File
+https://zenodo.org/record/1285940/files/c3-cluster0.dcd
+3 Zenodo DOI 10.5281/zenodo.1285940 File
+https://zenodo.org/record/1285940/files/c3b-cluster0.dcd
+4 Zenodo DOI 10.5281/zenodo.1285940 File
+https://zenodo.org/record/1285940/files/ic3-cluster0.dcd
+5 Zenodo DOI 10.5281/zenodo.1285940 File
+https://zenodo.org/record/1285940/files/ic3-cluster1.dcd
 #
 #
 loop_

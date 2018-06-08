@@ -91,7 +91,7 @@ if '--mmcif' in sys.argv:
     po.system.citations.append(ihm.Citation.from_pubmed_id(27250206))
 
     # Point to repositories where files are deposited
-    zenodo_id = '1273746'
+    zenodo_id = '1285940'
     doi = '10.5281/zenodo.' + zenodo_id
     url_top = 'https://zenodo.org/record/%s/files' % zenodo_id
     simo1.add_metadata(ihm.location.Repository(
