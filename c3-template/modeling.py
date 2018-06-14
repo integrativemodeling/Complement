@@ -96,7 +96,8 @@ if '--mmcif' in sys.argv:
     url_top = 'https://zenodo.org/record/%s/files' % zenodo_id
     simo1.add_metadata(ihm.location.Repository(
                        doi=doi, root="..",
-                       url="%s/Complement-v1.0.zip" % url_top,
+                       url="%s/integrativemodeling/Complement-v1.0.zip"
+                                            % url_top,
                        top_directory="integrativemodeling-Complement-a6a1494"))
 
 
