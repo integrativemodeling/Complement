@@ -1,6 +1,5 @@
 import IMP
 import IMP.core
-import IMP.base
 import IMP.algebra
 import IMP.atom
 import IMP.container
@@ -17,6 +16,7 @@ import IMP.pmi.macros
 import IMP.pmi.io
 
 import os
+import sys
 import operator
 
 
@@ -68,6 +68,14 @@ sampleobjects = []
 
 m = IMP.Model()
 simo1 = IMP.pmi.representation.Representation(m,upperharmonic=True,disorderedlength=False)
+simo1.state.short_name = 'C3b'
+simo1.state.long_name = 'Activated form C3b of human complement'
+
+if '--mmcif' in sys.argv:
+    simo1.add_protocol_output(po)
+
+simo1.dry_run = '--dry-run' in sys.argv
+
 fastadirectory="../data/"
 pdbdirectory="../data/"
 xlmsdirectory="../data/"
@@ -77,35 +85,35 @@ compactrepresentation=False
 if compactrepresentation:
        # compname  hier_name    color         fastafile              fastaid          pdbname      chain    resrange      read    "BEADS"ize rigid_body super_rigid_body emnum_components emtxtfilename  emmrcfilename chain of super rigid bodies
     domains=   [
-    ("beta",  "beta",    0.0,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2A73.pdb" ,   "A",   (1,645,0),  None,        10,      0,         [0],     0,   None,  None,   [0]),
-    ("alpha",  "ANT",    0.20,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2A73.pdb" ,   "B",   (727,745,0),  None,        10,      0,         [0],     0,   None,  None,   [1]),
-    ("alpha",  "MG6beta",    0.30,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2A73.pdb" ,   "B",   (746,805,0),  None,        10,  0,         [0],     0,   None,  None,   [1]),
-    ("alpha",  "MG7",    0.40,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2A73.pdb" ,   "B",   (806,911,0),  None,        10,      2,         [1],     0,   None,  None,   [1]),
-    ("alpha",  "CUBf",    0.50,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2A73.pdb" ,   "B",   (912,962,0),  None,        10,     3,         [1],     0,   None,  None,   [1]),
-    ("alpha",  "TED",    0.60,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2A73.pdb" ,   "B",   (963,1268,0),  None,        10,     4,         [1],     0,   None,  None,   [1]),
-    ("alpha",  "CUBg",    0.70,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2A73.pdb" ,   "B",   (1269,1330,0),  None,        10,   3,         [1],     0,   None,  None,   [1]),
-    ("alpha",  "MG8",    0.80,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2A73.pdb" ,   "B",   (1331,1474,0),  None,        10,    5,         [1],     0,   None,  None,   [1]),
-    ("alpha",  "Anchor",    0.90,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2A73.pdb" ,   "B",   (1475,1495,0),  None,        10, 6,         [1],     0,   None,  None,   [1]),
-    ("alpha",  "C345C",    1.0,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2A73.pdb" ,   "B",   (1496,1641,0),  None,        10,  6,         [1],     0,   None,  None,   [1]),
+    ("beta",  "beta",    0.0,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3|C3b_beta_1-645", pdbdirectory+"/2A73.pdb" ,   "A",   (1,645,0),  None,        10,      0,         [0],     0,   None,  None,   [0]),
+    ("alpha",  "ANT",    0.20,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full_alpha", pdbdirectory+"/2A73.pdb" ,   "B",   (727,745,0),  None,        10,      0,         [0],     0,   None,  None,   [1]),
+    ("alpha",  "MG6beta",    0.30,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full_alpha", pdbdirectory+"/2A73.pdb" ,   "B",   (746,805,0),  None,        10,  0,         [0],     0,   None,  None,   [1]),
+    ("alpha",  "MG7",    0.40,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full_alpha", pdbdirectory+"/2A73.pdb" ,   "B",   (806,911,0),  None,        10,      2,         [1],     0,   None,  None,   [1]),
+    ("alpha",  "CUBf",    0.50,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full_alpha", pdbdirectory+"/2A73.pdb" ,   "B",   (912,962,0),  None,        10,     3,         [1],     0,   None,  None,   [1]),
+    ("alpha",  "TED",    0.60,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full_alpha", pdbdirectory+"/2A73.pdb" ,   "B",   (963,1268,0),  None,        10,     4,         [1],     0,   None,  None,   [1]),
+    ("alpha",  "CUBg",    0.70,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full_alpha", pdbdirectory+"/2A73.pdb" ,   "B",   (1269,1330,0),  None,        10,   3,         [1],     0,   None,  None,   [1]),
+    ("alpha",  "MG8",    0.80,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full_alpha", pdbdirectory+"/2A73.pdb" ,   "B",   (1331,1474,0),  None,        10,    5,         [1],     0,   None,  None,   [1]),
+    ("alpha",  "Anchor",    0.90,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full_alpha", pdbdirectory+"/2A73.pdb" ,   "B",   (1475,1495,0),  None,        10, 6,         [1],     0,   None,  None,   [1]),
+    ("alpha",  "C345C",    1.0,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full_alpha", pdbdirectory+"/2A73.pdb" ,   "B",   (1496,1641,0),  None,        10,  6,         [1],     0,   None,  None,   [1]),
     ]
 
 else:
      domains=   [
-    ("beta",  "beta",    0.0,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2I07.pdb" ,   "A",       (1,645,0),  None,       1,     0,         [0],     0,   None,  None,   [1]),
-    ("alpha",  "ANT",    0.20,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2I07.pdb" ,   "B",      (727,745,0),  None,     1,     0,         [0],     0,   None,  None,   [1]),
-    ("alpha",  "MG6beta",    0.30,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2I07.pdb" ,   "B",  (746,804,0),  None,     1,     0,         [0],     0,   None,  None,   [1]),
-    ("alpha",  "MG6beta_MG7_Link",    0.30,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", "BEADS" ,   None,         (805,806,0),  None,     1,     None,         [0],     0,   None,  None,   [1]),
-    ("alpha",  "MG7",    0.40,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2I07.pdb" ,   "B",      (807,910,0),  None,     1,     2,         [1],     0,   None,  None,   [1]),
-    ("alpha",  "MG7_CUBf_Link",    0.40,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", "BEADS" ,   None,            (911,912,0),  None,     1,     None,         [1],     0,   None,  None,   [1]),
-    ("alpha",  "CUBf",    0.50,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2I07.pdb" ,   "B",     (913,961,0),  None,     1,     3,         [1],     0,   None,  None,   [1]),
-    ("alpha",  "CUBf_TED_Link",    0.50,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", "BEADS" ,   None,            (962,963,0),  None,     1,     None,         [1],     0,   None,  None,   [1]),
-    ("alpha",  "TED",    0.60,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2I07.pdb" ,   "B",      (964,1267,0),  None,    1,     4,         [1],     0,   None,  None,   [1]),
-    ("alpha",  "TED_CUBg_Link",    0.60,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", "BEADS" ,   None,            (1268,1269,0),  None,   1,     None,         [1],     0,   None,  None,   [1]),
-    ("alpha",  "CUBg",    0.70,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2I07.pdb" ,   "B",     (1270,1329,0),  None,   1,     3,         [1],     0,   None,  None,   [1]),
-    ("alpha",  "CUBg_MG8_Link",    0.70,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", "BEADS" ,   None,            (1330,1331,0),  None,   1,     None,         [1],     0,   None,  None,   [1]),
-    ("alpha",  "MG8",    0.80,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2I07.pdb" ,   "B",      (1332,1473,0),  None,   1,     5,         [1],     0,   None,  None,   [1]),
-    ("alpha",  "MG8_Anchor_Link",    0.80,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", "BEADS" ,   None,          (1474,1475,0),  None,   1,     None,         [1],     0,   None,  None,   [1]),
-    ("alpha",  "Anchor_C345C",    1.0,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full", pdbdirectory+"/2I07.pdb" ,   "B",   (1476,1641,0),  None,   1,     6,         [1],     0,   None,  None,   [1]),
+    ("beta",  "beta",    0.0,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3|C3b_beta_1-645", pdbdirectory+"/2I07.pdb" ,   "A",       (1,645,0),  None,       1,     0,         [0],     0,   None,  None,   [1]),
+    ("alpha",  "ANT",    0.20,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full_alpha", pdbdirectory+"/2I07.pdb" ,   "B",      (727,745,0),  None,     1,     0,         [0],     0,   None,  None,   [1]),
+    ("alpha",  "MG6beta",    0.30,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full_alpha", pdbdirectory+"/2I07.pdb" ,   "B",  (746,804,0),  None,     1,     0,         [0],     0,   None,  None,   [1]),
+    ("alpha",  "MG6beta_MG7_Link",    0.30,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full_alpha", "BEADS" ,   None,         (805,806,0),  None,     1,     None,         [0],     0,   None,  None,   [1]),
+    ("alpha",  "MG7",    0.40,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full_alpha", pdbdirectory+"/2I07.pdb" ,   "B",      (807,910,0),  None,     1,     2,         [1],     0,   None,  None,   [1]),
+    ("alpha",  "MG7_CUBf_Link",    0.40,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full_alpha", "BEADS" ,   None,            (911,912,0),  None,     1,     None,         [1],     0,   None,  None,   [1]),
+    ("alpha",  "CUBf",    0.50,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full_alpha", pdbdirectory+"/2I07.pdb" ,   "B",     (913,961,0),  None,     1,     3,         [1],     0,   None,  None,   [1]),
+    ("alpha",  "CUBf_TED_Link",    0.50,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full_alpha", "BEADS" ,   None,            (962,963,0),  None,     1,     None,         [1],     0,   None,  None,   [1]),
+    ("alpha",  "TED",    0.60,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full_alpha", pdbdirectory+"/2I07.pdb" ,   "B",      (964,1267,0),  None,    1,     4,         [1],     0,   None,  None,   [1]),
+    ("alpha",  "TED_CUBg_Link",    0.60,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full_alpha", "BEADS" ,   None,            (1268,1269,0),  None,   1,     None,         [1],     0,   None,  None,   [1]),
+    ("alpha",  "CUBg",    0.70,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full_alpha", pdbdirectory+"/2I07.pdb" ,   "B",     (1270,1329,0),  None,   1,     3,         [1],     0,   None,  None,   [1]),
+    ("alpha",  "CUBg_MG8_Link",    0.70,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full_alpha", "BEADS" ,   None,            (1330,1331,0),  None,   1,     None,         [1],     0,   None,  None,   [1]),
+    ("alpha",  "MG8",    0.80,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full_alpha", pdbdirectory+"/2I07.pdb" ,   "B",      (1332,1473,0),  None,   1,     5,         [1],     0,   None,  None,   [1]),
+    ("alpha",  "MG8_Anchor_Link",    0.80,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full_alpha", "BEADS" ,   None,          (1474,1475,0),  None,   1,     None,         [1],     0,   None,  None,   [1]),
+    ("alpha",  "Anchor_C345C",    1.0,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full_alpha", pdbdirectory+"/2I07.pdb" ,   "B",   (1476,1641,0),  None,   1,     6,         [1],     0,   None,  None,   [1]),
     ]   
 
 bm1=IMP.pmi.macros.BuildModel1(simo1)
@@ -166,6 +174,12 @@ xl = IMP.pmi.restraints.crosslinking.CrossLinkingMassSpectrometryRestraint(repre
                             slope=0.01,
                             resolution=1.0,
                             label="XL")
+# Point to the raw mass spec data and peaklists used to derive the crosslinks.
+l = ihm.location.PRIDELocation('PXD003486',
+                         details='All raw mass spectrometry files and '
+                                 'peaklists used in the study')
+xl.dataset.add_primary(ihm.dataset.MassSpecDataset(location=l))
+
 xl.add_to_model()
 sigma=xl.sigma_dictionary["SIGMA"][0]
 psic=xl.psi_dictionary["Confident"][0]
@@ -225,6 +239,7 @@ mc1=IMP.pmi.macros.ReplicaExchange0(m,
                                     global_output_directory="output",
                                     rmf_dir="rmfs/",
                                     best_pdb_dir="pdbs/",
-                                    replica_stat_file_suffix="stat_replica")
+                                    replica_stat_file_suffix="stat_replica",
+                                    test_mode=simo1.dry_run)
 mc1.execute_macro()
 

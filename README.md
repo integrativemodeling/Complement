@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.496174.svg)](https://doi.org/10.5281/zenodo.496174)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1285940.svg)](https://doi.org/10.5281/zenodo.1285940)
 
 # Complement
 
@@ -40,7 +40,10 @@ on multiple cores (eg 16 in this case). The run produces files using the
 Refer to the [IMP tutorial](https://integrativemodeling.org/nightly/doc/manual/rnapolii_stalk.html)
 and [Nup84](https://salilab.org/nup84) for fuller descriptions of the files.
 
-`analysis` directories contain the scripts and the results of the analysis on the actual production runs (which are not released here).
+`analysis` directories contain the scripts and the results of the analysis
+on the actual production runs (which are available as `traj-*.tar.xz`
+[at Zenodo](https://doi.org/10.5281/zenodo.1285940) - note that two independent
+runs were carried out for each state).
 
 `clustering.py` is the first script that needs to be run. It produces directories with the corresponding structural cluster data. The output directory is `kmeans_weight_0_500_1`.
 
