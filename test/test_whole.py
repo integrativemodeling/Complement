@@ -13,8 +13,12 @@ class Tests(unittest.TestCase):
         os.chdir(os.path.join(TOPDIR, 'c3-template'))
         if os.path.exists("complement.cif"):
             os.unlink("complement.cif")
+        # Potentially override methods that need network access
+        env = os.environ.copy()
+        env['PYTHONPATH'] = os.path.join(TOPDIR, 'test', 'mock') \
+                            + ':' + env.get('PYTHONPATH', '')
         p = subprocess.check_call(
-                ["python", "modeling.py", "--mmcif", "--dry-run"])
+                ["python", "modeling.py", "--mmcif", "--dry-run"], env=env)
         # Check size of output file
         with open("complement.cif") as fh:
             wcl = len(fh.readlines())
