@@ -68,6 +68,23 @@ class Tests(unittest.TestCase):
         # No psi/sigma available
         self.assertEqual(sum(len(x.fits) for x in xl.cross_links), 0)
 
+        # Check ordering of states
+        p, = s.ordered_processes
+        self.assertEqual(p.ordered_by, 'steps in a reaction pathway')
+        step1, step2 = p.steps
+        self.assertEqual(step1.description,
+                         'proteolytic cleavage of C3 yields C3b')
+        self.assertEqual(len(step1), 1)
+        self.assertEqual(step1[0].group_begin, state1[0])
+        self.assertEqual(step1[0].group_end, state2[0])
+        self.assertEqual(step2.description,
+                         'thioester hydrolysis of C3 yields iC3')
+        self.assertEqual(len(step2), 2)
+        self.assertEqual(step2[0].group_begin, state1[0])
+        self.assertEqual(step2[0].group_end, state3[0])
+        self.assertEqual(step2[1].group_begin, state1[0])
+        self.assertEqual(step2[1].group_end, state3[1])
+
 
 if __name__ == '__main__':
     unittest.main()
