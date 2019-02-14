@@ -1,8 +1,8 @@
 from __future__ import print_function
 import IMP
-import IMP.pmi
-import IMP.pmi.analysis
-import IMP.pmi.output
+import IMP.pmi1
+import IMP.pmi1.analysis
+import IMP.pmi1.output
 import IMP.atom
 import glob
 
@@ -23,7 +23,7 @@ model=IMP.Model()
 frames=[0]*len(rmfs)
 
 model=IMP.Model()
-pr=IMP.pmi.analysis.Precision(model,1,
+pr=IMP.pmi1.analysis.Precision(model,1,
                               selection_dictionary=selection_dictionary)
 #pr.set_precision_style('pairwise_drmsd_k')
 

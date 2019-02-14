@@ -1,19 +1,19 @@
-import IMP.pmi
-import IMP.pmi.io
-import IMP.pmi.io.crosslink
-import IMP.pmi.io.xltable
+import IMP.pmi1
+import IMP.pmi1.io
+import IMP.pmi1.io.crosslink
+import IMP.pmi1.io.xltable
 
 import operator
 
-from IMP.pmi.io.crosslink import FilterOperator as FO
-cldbkc=IMP.pmi.io.crosslink.CrossLinkDataBaseKeywordsConverter()
+from IMP.pmi1.io.crosslink import FilterOperator as FO
+cldbkc=IMP.pmi1.io.crosslink.CrossLinkDataBaseKeywordsConverter()
 cldbkc.set_protein1_key("Peptide Chain 1")
 cldbkc.set_protein2_key("Peptide Chain 2")
 cldbkc.set_residue1_key("Residue 1")
 cldbkc.set_residue2_key("Residue 2")
 cldbkc.set_psi_key("PSI")
 
-cldb=IMP.pmi.io.crosslink.CrossLinkDataBase(cldbkc)
+cldb=IMP.pmi1.io.crosslink.CrossLinkDataBase(cldbkc)
 cldb.create_set_from_file("../data/QCLMS_iC3-Domain-Architecture_Rappsilber_TableS2-1.csv")
 cldb.create_new_keyword(cldb.state_key)
 cldb.set_value(cldb.state_key,0)
@@ -25,7 +25,7 @@ fo=FO('Quantitation summary',operator.eq,'C3b-iC3 shared')| \
 
 filtered_cldb=cldb.filter(fo)
 
-xlt=IMP.pmi.io.xltable.XLTable(35)
+xlt=IMP.pmi1.io.xltable.XLTable(35)
 prots = ["alpha","beta"]
 
 

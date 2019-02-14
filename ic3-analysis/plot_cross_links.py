@@ -1,8 +1,8 @@
 import IMP
-import IMP.pmi
-import IMP.pmi.output
-import IMP.pmi.io
-import IMP.pmi.io.crosslink
+import IMP.pmi1
+import IMP.pmi1.output
+import IMP.pmi1.io
+import IMP.pmi1.io.crosslink
 import operator
 import sys
 
@@ -10,21 +10,21 @@ stat_file=sys.argv[1] #="kmeans_weight_0_500_10/cluster.3/stat.out"
 output_file=sys.argv[2] #=Distances
 
 
-po=IMP.pmi.output.ProcessOutput(stat_file)
-#po=IMP.pmi.output.ProcessOutput("../../../AKAP79_Calmodulin_modeling/output/stat.0.out")
+po=IMP.pmi1.output.ProcessOutput(stat_file)
+#po=IMP.pmi1.output.ProcessOutput("../../../AKAP79_Calmodulin_modeling/output/stat.0.out")
 l0=[p for p in po.get_keys() if "CrossLinkingMassSpectrometryRestraint_Distance" in p]
 
 d0=po.get_fields(l0)
 
-from IMP.pmi.io.crosslink import FilterOperator as FO
-cldbkc=IMP.pmi.io.crosslink.CrossLinkDataBaseKeywordsConverter()
+from IMP.pmi1.io.crosslink import FilterOperator as FO
+cldbkc=IMP.pmi1.io.crosslink.CrossLinkDataBaseKeywordsConverter()
 cldbkc.set_protein1_key("Peptide Chain 1")
 cldbkc.set_protein2_key("Peptide Chain 2")
 cldbkc.set_residue1_key("Residue 1")
 cldbkc.set_residue2_key("Residue 2")
 cldbkc.set_psi_key("PSI")
 
-cldb=IMP.pmi.io.crosslink.CrossLinkDataBase(cldbkc)
+cldb=IMP.pmi1.io.crosslink.CrossLinkDataBase(cldbkc)
 cldb.create_set_from_file("../data/QCLMS_iC3-Domain-Architecture_Rappsilber_TableS2-1.csv")
 cldb.create_new_keyword(cldb.state_key)
 cldb.set_value(cldb.state_key,0)
@@ -50,8 +50,8 @@ for kl in l0:
 
 tuplelist.sort(key=lambda x: x[2])
 
-IMP.pmi.output.plot_fields_box_plots(output_file,[p[0] for p in tuplelist]
+IMP.pmi1.output.plot_fields_box_plots(output_file,[p[0] for p in tuplelist]
                                                   ,range(len([p[0] for p in tuplelist])),frequencies=True,xlabels=[p[1] for p in tuplelist], scale_plot_length=0.3)
 
-#IMP.pmi.output.plot_fields_box_plots("Distances",dists1
+#IMP.pmi1.output.plot_fields_box_plots("Distances",dists1
 #                                                  ,range(len(dists1)),frequencies=True,xlabels=xlabels1, scale_plot_length=0.3)

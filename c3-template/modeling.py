@@ -4,19 +4,19 @@ import IMP.algebra
 import IMP.atom
 import IMP.container
 
-import IMP.pmi.mmcif
+import IMP.pmi1.mmcif
 import ihm.location
 import ihm.model
-import IMP.pmi.restraints.crosslinking_new
-import IMP.pmi.restraints.stereochemistry
-import IMP.pmi.restraints.em
-import IMP.pmi.restraints.basic
-import IMP.pmi.representation
-import IMP.pmi.tools
-import IMP.pmi.samplers
-import IMP.pmi.output
-import IMP.pmi.macros
-import IMP.pmi.io
+import IMP.pmi1.restraints.crosslinking_new
+import IMP.pmi1.restraints.stereochemistry
+import IMP.pmi1.restraints.em
+import IMP.pmi1.restraints.basic
+import IMP.pmi1.representation
+import IMP.pmi1.tools
+import IMP.pmi1.samplers
+import IMP.pmi1.output
+import IMP.pmi1.macros
+import IMP.pmi1.io
 
 import os
 import sys
@@ -70,7 +70,7 @@ sampleobjects = []
 # setting up topology
 
 m = IMP.Model()
-simo1 = IMP.pmi.representation.Representation(m,upperharmonic=True,disorderedlength=False)
+simo1 = IMP.pmi1.representation.Representation(m,upperharmonic=True,disorderedlength=False)
 simo1.state.short_name = 'C3'
 simo1.state.long_name = 'Human complement component C3'
 
@@ -82,7 +82,7 @@ compactrepresentation=False
 
 if '--mmcif' in sys.argv:
     # Record the modeling protocol to an mmCIF file
-    po = IMP.pmi.mmcif.ProtocolOutput(open('complement.cif', 'w'))
+    po = IMP.pmi1.mmcif.ProtocolOutput(open('complement.cif', 'w'))
     simo1.add_protocol_output(po)
     po.system.title = ('Structure of complement C3(H2O) revealed by '
                        'quantitative cross-linking/mass spectrometry '
@@ -139,16 +139,16 @@ else:
     ("alpha",  "Anchor_C345C",    1.0,  fastadirectory+"/C3-iC3-C3b_sequence.fasta",  "C3|iC3_full_alpha", pdbdirectory+"/2A73.pdb" ,   "B",   (1476,1641,0),  None,   1,     6,         [1],     0,   None,  None,   [1]),
     ]   
 
-bm1=IMP.pmi.macros.BuildModel1(simo1)
+bm1=IMP.pmi1.macros.BuildModel1(simo1)
 bm1.build_model(domains,sequence_connectivity_scale=1.0,sequence_connectivity_resolution=1)
 bm1.scale_bead_radii(40,0.8)
 #bm1.save_rmf("simo1.rmf3")
-bm1.set_coordinates("MG6beta_MG7_Link",IMP.pmi.tools.get_terminal_residue_position(simo1,bm1.domain_dict["MG6beta"], terminus="C", resolution=1))
-bm1.set_coordinates("MG7_CUBf_Link",IMP.pmi.tools.get_terminal_residue_position(simo1,bm1.domain_dict["MG7"], terminus="C", resolution=1))
-bm1.set_coordinates("CUBf_TED_Link",IMP.pmi.tools.get_terminal_residue_position(simo1,bm1.domain_dict["CUBf"], terminus="C", resolution=1))
-bm1.set_coordinates("TED_CUBg_Link",IMP.pmi.tools.get_terminal_residue_position(simo1,bm1.domain_dict["TED"], terminus="C", resolution=1))
-bm1.set_coordinates("CUBg_MG8_Link",IMP.pmi.tools.get_terminal_residue_position(simo1,bm1.domain_dict["CUBg"], terminus="C", resolution=1))
-bm1.set_coordinates("MG8_Anchor_Link",IMP.pmi.tools.get_terminal_residue_position(simo1,bm1.domain_dict["MG8"], terminus="C", resolution=1))
+bm1.set_coordinates("MG6beta_MG7_Link",IMP.pmi1.tools.get_terminal_residue_position(simo1,bm1.domain_dict["MG6beta"], terminus="C", resolution=1))
+bm1.set_coordinates("MG7_CUBf_Link",IMP.pmi1.tools.get_terminal_residue_position(simo1,bm1.domain_dict["MG7"], terminus="C", resolution=1))
+bm1.set_coordinates("CUBf_TED_Link",IMP.pmi1.tools.get_terminal_residue_position(simo1,bm1.domain_dict["CUBf"], terminus="C", resolution=1))
+bm1.set_coordinates("TED_CUBg_Link",IMP.pmi1.tools.get_terminal_residue_position(simo1,bm1.domain_dict["TED"], terminus="C", resolution=1))
+bm1.set_coordinates("CUBg_MG8_Link",IMP.pmi1.tools.get_terminal_residue_position(simo1,bm1.domain_dict["CUBg"], terminus="C", resolution=1))
+bm1.set_coordinates("MG8_Anchor_Link",IMP.pmi1.tools.get_terminal_residue_position(simo1,bm1.domain_dict["MG8"], terminus="C", resolution=1))
 
 
 # randomize the initial configuration
@@ -169,20 +169,20 @@ simo1.show_component_table("beta")
 
 # scoring function
 
-ev = IMP.pmi.restraints.stereochemistry.ExcludedVolumeSphere(simo1,resolution=10)
+ev = IMP.pmi1.restraints.stereochemistry.ExcludedVolumeSphere(simo1,resolution=10)
 ev.set_weight(1.0)
 ev.add_to_model()
 outputobjects.append(ev)
 
 
-from IMP.pmi.io.crosslink import FilterOperator as FO
-cldbkc=IMP.pmi.io.crosslink.CrossLinkDataBaseKeywordsConverter()
+from IMP.pmi1.io.crosslink import FilterOperator as FO
+cldbkc=IMP.pmi1.io.crosslink.CrossLinkDataBaseKeywordsConverter()
 cldbkc.set_protein1_key("Peptide Chain 1")
 cldbkc.set_protein2_key("Peptide Chain 2")
 cldbkc.set_residue1_key("Residue 1")
 cldbkc.set_residue2_key("Residue 2")
 cldbkc.set_psi_key("PSI")
-cldb=IMP.pmi.io.crosslink.CrossLinkDataBase(cldbkc)
+cldb=IMP.pmi1.io.crosslink.CrossLinkDataBase(cldbkc)
 cldb.create_set_from_file("../data/QCLMS_iC3-Domain-Architecture_Rappsilber_TableS2-1.csv")
 
 fo=FO('Quantitation summary',operator.eq,'C3 Unique')| \
@@ -192,7 +192,7 @@ fo=FO('Quantitation summary',operator.eq,'C3 Unique')| \
 
 filtered_cldb=cldb.filter(fo)
 
-xl = IMP.pmi.restraints.crosslinking.CrossLinkingMassSpectrometryRestraint(representation=simo1,
+xl = IMP.pmi1.restraints.crosslinking.CrossLinkingMassSpectrometryRestraint(representation=simo1,
                             CrossLinkDataBase=filtered_cldb,
                             length=21.0,
                             slope=0.01,
@@ -217,7 +217,7 @@ sampleobjects.append(xl)
 outputobjects.append(xl)
 
 '''
-xld = IMP.pmi.restraints.crosslinking_new.DisulfideCrossLinkRestraint(
+xld = IMP.pmi1.restraints.crosslinking_new.DisulfideCrossLinkRestraint(
     simo1,
     (851,851,"alpha"),
     (1491,1491,"alpha"),
@@ -229,7 +229,7 @@ outputobjects.append(xld)
 '''
 
 #setting up the disulfide bond
-xld=IMP.pmi.restraints.basic.DistanceRestraint(simo1,
+xld=IMP.pmi1.restraints.basic.DistanceRestraint(simo1,
                                                (851,851,"alpha"),
                                                (1491,1491,"alpha"),
                                                4.0,
@@ -238,7 +238,7 @@ xld.add_to_model()
 outputobjects.append(xld)
 
 
-mc1=IMP.pmi.macros.ReplicaExchange0(m,
+mc1=IMP.pmi1.macros.ReplicaExchange0(m,
                                     simo1,
                                     monte_carlo_sample_objects=sampleobjects,
                                     output_objects=outputobjects,

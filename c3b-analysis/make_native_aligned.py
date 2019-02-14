@@ -1,7 +1,7 @@
 import IMP
-import IMP.pmi
-import IMP.pmi.analysis
-import IMP.pmi.io
+import IMP.pmi1
+import IMP.pmi1.analysis
+import IMP.pmi1.io
 import os
 
 model = IMP.Model()
@@ -10,9 +10,9 @@ native="../c3b-native/native.rmf3"
 reference="kmeans_weight_0_500_1/cluster.0/0.rmf3"
 
 
-native_hiers,rs=IMP.pmi.analysis.get_hiers_and_restraints_from_rmf(model,0,native)
+native_hiers,rs=IMP.pmi1.analysis.get_hiers_and_restraints_from_rmf(model,0,native)
 native_hier=native_hiers[0]
-reference_hiers=IMP.pmi.analysis.get_hiers_from_rmf(model,0,reference)
+reference_hiers=IMP.pmi1.analysis.get_hiers_from_rmf(model,0,reference)
 reference_hier=reference_hiers[0]
 
 s=IMP.atom.Selection(native_hier,molecule="beta")
@@ -42,7 +42,7 @@ for p in IMP.atom.get_leaves(native_hier):
 for rb in rbs:
     IMP.core.transform(rb,transformation)
 
-o=IMP.pmi.output.Output()
+o=IMP.pmi1.output.Output()
 out_pdb_fn=os.path.join("native.pdb")
 out_rmf_fn=os.path.join("native.rmf3")
 o.init_pdb(out_pdb_fn,native_hier)

@@ -1,6 +1,6 @@
 import IMP
-import IMP.pmi
-import IMP.pmi.macros
+import IMP.pmi1
+import IMP.pmi1.macros
 import sys
 import glob
 import ihm.location
@@ -60,7 +60,7 @@ rmsd_components_names["beta"]="beta"
 nclusters=2
 
 
-mc=IMP.pmi.macros.AnalysisReplicaExchange0(model,
+mc=IMP.pmi1.macros.AnalysisReplicaExchange0(model,
                                         stat_file_name_suffix="stat",     # don't change
                                         merge_directories=["../ic3.1","../ic3.2"],
                                         global_output_directory="./output")  # don't change
