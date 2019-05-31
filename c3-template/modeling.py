@@ -7,6 +7,10 @@ import IMP.container
 import IMP.pmi1.mmcif
 import ihm.location
 import ihm.model
+try:
+    from ihm import cross_linkers
+except ImportError:
+    pass
 import IMP.pmi1.restraints.crosslinking_new
 import IMP.pmi1.restraints.stereochemistry
 import IMP.pmi1.restraints.em
@@ -305,6 +309,8 @@ if '--mmcif' in sys.argv:
     for r in po.system.restraints:
         if hasattr(r, 'linker_type'):
             r.linker_type = 'BS3'
+        elif hasattr(r, 'linker'):
+            r.linker = cross_linkers.bs3
 
     # Add reaction cycle between states (Fig 1B)
     c3, c3b, ic3 = po.system.state_groups[0]
