@@ -7,12 +7,9 @@ import IMP.container
 import IMP.pmi1.mmcif
 import ihm.location
 import ihm.model
+import ihm.cross_linkers
 try:
     import ihm.reference
-except ImportError:
-    pass
-try:
-    from ihm import cross_linkers
 except ImportError:
     pass
 import IMP.pmi1.restraints.crosslinking_new
@@ -322,10 +319,8 @@ if '--mmcif' in sys.argv:
 
     # Correct crosslinker type (defaults to restraint label, which is "XL")
     for r in po.system.restraints:
-        if hasattr(r, 'linker_type'):
-            r.linker_type = 'BS3'
-        elif hasattr(r, 'linker'):
-            r.linker = cross_linkers.bs3
+        if hasattr(r, 'linker'):
+            r.linker = ihm.cross_linkers.bs3
 
     # Add reaction cycle between states (Fig 1B)
     c3, c3b, ic3 = po.system.state_groups[0]
