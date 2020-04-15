@@ -8,6 +8,10 @@ import IMP.pmi1.mmcif
 import ihm.location
 import ihm.model
 try:
+    import ihm.reference
+except ImportError:
+    pass
+try:
     from ihm import cross_linkers
 except ImportError:
     pass
@@ -272,6 +276,17 @@ mc1=IMP.pmi1.macros.ReplicaExchange0(m,
 mc1.execute_macro()
 
 if '--mmcif' in sys.argv:
+    # Link entities to UniProt
+    if hasattr(ihm, 'reference'):
+        lpep = ihm.LPeptideAlphabet()
+        sd_beta = [ihm.reference.SeqDif(292, lpep['P'], lpep['L'])]
+        for subunit, accession, db_align_begin, seq_dif in (
+                ('beta', 'P01024', 23, sd_beta), ('alpha', 'P01024', 672, [])):
+            ref = ihm.reference.UniProtSequence.from_accession(accession)
+            ref.alignments.append(ihm.reference.Alignment(
+                db_begin=db_align_begin, seq_dif=seq_dif))
+            e = po.asym_units[subunit].entity.references.append(ref)
+
     # Add clustering info to the mmCIF file
     os.chdir('../c3-analysis')
     loc = ihm.location.WorkflowFileLocation('clustering.py',
